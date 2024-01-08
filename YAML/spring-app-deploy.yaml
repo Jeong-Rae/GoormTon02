@@ -28,8 +28,8 @@ spec:
           configMapKeyRef:
             name: mysql-config
             key: user
-      - name: SPRING_DATASOURCE_PASSWORD
-        valueFrom:
-          secretKeyRef:
-            name: mysql-secret
-            key: user_password
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: user_password
